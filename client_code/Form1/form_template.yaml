@@ -9,22 +9,25 @@ components:
   layout_properties: {slot: default}
   components:
   - name: label_2
-    properties: {text: 'Nhập dãy n (ví dụ: 1,2,3..) '}
+    properties: {text: 'Nhập dãy số n (ví dụ: 3,2,1,...)'}
     type: Label
     layout_properties: {grid_position: 'NPGMQS,DSFOFE'}
-  - name: txtN
-    properties: {visible: true}
-    type: TextBox
-    layout_properties: {grid_position: 'FHXONH,ODYBNR'}
   - name: btnNHAP
-    properties: {text: NHẬP VÀO MẢNG, bold: true, background: 'theme:Tertiary', foreground: 'theme:Surface'}
+    properties: {text: BẤM VÀO ĐÂY ĐỂ NHẬP, bold: true, background: 'theme:Tertiary',
+      foreground: 'theme:Surface'}
     type: Button
     layout_properties: {grid_position: 'MNYKNW,YELJBW'}
-    event_bindings: {}
+    event_bindings: {click: btnNHAP_click}
   - name: label_MANG
     properties: {}
     type: Label
     layout_properties: {grid_position: 'HKGSEM,XKMFVL'}
+  - name: btnSX
+    properties: {text: SẮP XẾP, bold: true, background: 'theme:Tertiary', foreground: 'theme:On
+        Primary'}
+    type: Button
+    layout_properties: {grid_position: 'EIQBAE,LPGDJE'}
+    event_bindings: {click: btnSX_click}
   - name: label_3
     properties: {text: Kết quả sau khi sắp xếp}
     type: Label
