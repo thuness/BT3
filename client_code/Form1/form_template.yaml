@@ -1,14 +1,41 @@
 is_package: true
 container:
   type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
+  properties: {html: '@theme:standard-page.html', background: ''}
 components:
 - type: ColumnPanel
   properties: {col_widths: '{}'}
   name: content_panel
   layout_properties: {slot: default}
-  components: []
-- type: FlowPanel
-  properties: {}
-  name: navbar_links
-  layout_properties: {slot: nav-right}
+  components:
+  - name: label_2
+    properties: {text: 'Nhập dãy n (ví dụ: 1,2,3..) '}
+    type: Label
+    layout_properties: {grid_position: 'NPGMQS,DSFOFE'}
+  - name: txtN
+    properties: {visible: true}
+    type: TextBox
+    layout_properties: {grid_position: 'FHXONH,ODYBNR'}
+  - name: btnNHAP
+    properties: {text: NHẬP VÀO MẢNG, bold: true, background: 'theme:Tertiary', foreground: 'theme:Surface'}
+    type: Button
+    layout_properties: {grid_position: 'MNYKNW,YELJBW'}
+    event_bindings: {}
+  - name: label_MANG
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'HKGSEM,XKMFVL'}
+  - name: label_3
+    properties: {text: Kết quả sau khi sắp xếp}
+    type: Label
+    layout_properties: {grid_position: 'OFYWUN,UGQEOD'}
+  - name: label_KQ
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'KYUYNB,TWZUPG'}
+- name: label_1
+  properties: {text: "B\xe0i t\u1eadp 3 - S\u1eafp x\u1ebfp d\xe3y s\u1ed1 nguy\xea\
+      n theo th\u1ee9 t\u1ef1 b\u1eb1ng thu\u1eadt to\xe1n Insertion Sort\n ", italic: false,
+    bold: true, underline: false, align: center}
+  type: Label
+  layout_properties: {slot: title}
