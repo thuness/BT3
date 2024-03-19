@@ -19,4 +19,3 @@ class Form1(Form1Template):
     arr = list(map(int, input(self.txtN.split(",")))
 
     # Any code you write here will run before the form opens.
-pass
